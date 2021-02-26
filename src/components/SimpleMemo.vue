@@ -1,12 +1,14 @@
 <template>
-  <div class="simple-memo">
+  <div class="simple-memo" v-bind:style="{ backgroundColor: bgColor }">
     <slot />
     <!--<slot />でここに表示する内容を親コンポーネントが決められる -->
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  props: ["bgColor"],
+}
 </script>
 
 <style scoped>
